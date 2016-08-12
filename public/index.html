@@ -53,7 +53,7 @@
             }
         });
 
-        var TaskList= React.createClass({
+        var TaskList = React.createClass({
             render: function() {
                 var createItem = function(itemText) {
                     return (
@@ -64,13 +64,14 @@
             }
         });
 
-        var TaskListItem= React.createClass({
+        var TaskListItem = React.createClass({
             render: function() {
                 return (
                         <li>{this.props.children}</li>
                 )
             }
         });
+        
         React.render(<TaskApp/>, document.getElementById('task'));
     </script>
 
