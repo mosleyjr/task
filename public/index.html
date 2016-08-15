@@ -60,23 +60,24 @@
                             <TaskListItem>{itemText}</TaskListItem>
                     );
                 };
-                return <ul>{this.props.items.map(createItem)}</ul>;
+                return <div>{this.props.items.map(createItem)}</div>;
             }
         });
 
         var TaskListItem = React.createClass({
             render: function() {
                 return (
-                        <li>{this.props.children}</li>
+                        <div contentEditable className='listItem' onKeyDown={keyDownFunctions}>{this.props.children}</div>
                 )
             }
         });
-        
+
         React.render(<TaskApp/>, document.getElementById('task'));
     </script>
 
     <div id="task">
         <!-- This is where React will work its magic -->
     </div>
+    <script src="../packages-js/arrow-navigation.js"></script>
 </body>
 </html>
